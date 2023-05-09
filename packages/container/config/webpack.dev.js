@@ -1,5 +1,5 @@
 const { merge } = require("webpack-merge");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 // This is the webpack configuration for development mode.
 // It is merged with the common configuration in webpack.common.js.
@@ -22,10 +22,6 @@ const devConfig = {
         marketing: "marketing@http://localhost:8081/remoteEntry.js",
       },
       shared: packageJson.dependencies,
-    }),
-
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
     }),
   ],
 };
