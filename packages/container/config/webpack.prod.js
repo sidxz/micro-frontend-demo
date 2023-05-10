@@ -16,6 +16,10 @@ const prodConfig = {
     filename: "[name].[contenthash].js",
     // This is the path to the build folder of the container.
     // path: path.resolve(__dirname, "./build"),
+
+    // Important for AWS Deployment
+    publicPath: "/container/latest/",
+  
   },
   plugins: [
     new ModuleFederationPlugin({
