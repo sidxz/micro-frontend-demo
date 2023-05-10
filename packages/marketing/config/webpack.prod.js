@@ -14,6 +14,7 @@ const prodConfig = {
     filename: "[name].[contenthash].js",
     // This is the path to the build folder of the container.
     // path: path.resolve(__dirname, "./build"),
+    publicPath: "/marketing/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
